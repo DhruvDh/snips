@@ -5,7 +5,7 @@ var path = require('path');
 var fs = require('fs');
 
 var natural = require('natural');
-var classifier = new natural.BayesClassifier();
+var classifier = new natural.LogisticRegressionClassifier();
 
 var intents = {
     list: ['AddToPlaylist', 'BookRestaurant', 'GetWeather', 'PlayMusic', 'RateBook', 'SearchCreativeWork', 'SearchScreeningEvent'], 
@@ -57,6 +57,7 @@ var intents = {
     total: 0,
     accuracy: 0.0
 }
+console.log(1)
 
 for(var i = 0; i < intents.list.length; i++) {
     var docs = JSON.parse(fs.readFileSync(path.join(__dirname, 'cleaner', 'cleaned', 'train_'+intents.list[i]+'.clean.json')));
@@ -64,9 +65,9 @@ for(var i = 0; i < intents.list.length; i++) {
         classifier.addDocument(docs[j], intents.list[i]);
     }
 }
-
+console.log(2)
 classifier.train();
-
+console.log(3)
 
 fs.writeFile(path.join(__dirname, "classifiers", "trainedNaiveBayes.json"), JSON.stringify(classifier), 'utf8', function(err){
     if (err) console.log(err);
@@ -98,7 +99,7 @@ intents.list.forEach(function(intent) {
 intents.accuracy = (intents.totalTruePositive/intents.total)*100.0;
 console.log("Total Accuracy: "+intents.accuracy);
 
-fs.writeFile(path.join(__dirname, 'log', 'firstNaiveBayesAttempt.json'), JSON.stringify(intents), 'utf8', function(err) {
+fs.writeFile(path.join(__dirname, 'log', 'firstLogisticRegression.json'), JSON.stringify(intents), 'utf8', function(err) {
     if (err) console.log(err);
 });
 
