@@ -14,7 +14,7 @@ var cleaner = function (rawFileName) {
                 processed[i] += raw[i].data[j].text;
         }
     }
-    fs.writeFile(path.join(__dirname, "cleaned", rawFileName+".clean.json"), JSON.stringify(processed), 'utf8')
+    fs.writeFile(path.join(__dirname, "cleaned", rawFileName+".clean.json"), JSON.stringify(processed), 'utf8');
 }
 
 var intents = ['AddToPlaylist', 'BookRestaurant', 'GetWeather', 'PlayMusic', 'RateBook', 'SearchCreativeWork', 'SearchScreeningEvent'];
