@@ -95,15 +95,12 @@ intents.list.forEach(function(intent) {
     intents.total += intents[intent].total;
 });
 
-fs.writeFile(path.join(__dirname, 'log', 'firstNaiveBayesAttempt.json'), JSON.stringify(intents), 'utf8', function(err) {
-    if (err) console.log(err);
-});
-
 intents.accuracy = (intents.totalTruePositive/intents.total)*100.0;
 console.log("Total Accuracy: "+intents.accuracy);
 
-
-
+fs.writeFile(path.join(__dirname, 'log', 'firstNaiveBayesAttempt.json'), JSON.stringify(intents), 'utf8', function(err) {
+    if (err) console.log(err);
+});
 
 app.use(bodyParser.urlencoded({
     extended: true

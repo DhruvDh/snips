@@ -1,1 +1,58 @@
-{"list":["AddToPlaylist","BookRestaurant","GetWeather","PlayMusic","RateBook","SearchCreativeWork","SearchScreeningEvent"],"AddToPlaylist":{"truePositive":1926,"total":1943,"falsePositive":84,"falseNegative":16},"BookRestaurant":{"truePositive":1940,"total":1974,"falsePositive":123,"falseNegative":33},"GetWeather":{"truePositive":1955,"total":2001,"falsePositive":41,"falseNegative":45},"PlayMusic":{"truePositive":1945,"total":2001,"falsePositive":202,"falseNegative":55},"RateBook":{"truePositive":1906,"total":1957,"falsePositive":35,"falseNegative":50},"SearchCreativeWork":{"truePositive":1551,"total":1955,"falsePositive":64,"falseNegative":403},"SearchScreeningEvent":{"truePositive":1808,"total":1960,"falsePositive":204,"falseNegative":151},"totalTruePositive":13031,"totalFalsePositive":753,"totalFalseNegative":753,"total":13791,"accuracy":0}
+{
+    "list": [
+        "AddToPlaylist",
+        "BookRestaurant",
+        "GetWeather",
+        "PlayMusic",
+        "RateBook",
+        "SearchCreativeWork",
+        "SearchScreeningEvent"
+    ],
+    "AddToPlaylist": {
+        "truePositive": 1926,
+        "total": 1943,
+        "falsePositive": 84,
+        "falseNegative": 16
+    },
+    "BookRestaurant": {
+        "truePositive": 1940,
+        "total": 1974,
+        "falsePositive": 123,
+        "falseNegative": 33
+    },
+    "GetWeather": {
+        "truePositive": 1955,
+        "total": 2001,
+        "falsePositive": 41,
+        "falseNegative": 45
+    },
+    "PlayMusic": {
+        "truePositive": 1945,
+        "total": 2001,
+        "falsePositive": 202,
+        "falseNegative": 55
+    },
+    "RateBook": {
+        "truePositive": 1906,
+        "total": 1957,
+        "falsePositive": 35,
+        "falseNegative": 50
+    },
+    "SearchCreativeWork": {
+        "truePositive": 1551,
+        "total": 1955,
+        "falsePositive": 64,
+        "falseNegative": 403
+    },
+    "SearchScreeningEvent": {
+        "truePositive": 1808,
+        "total": 1960,
+        "falsePositive": 204,
+        "falseNegative": 151
+    },
+    "totalTruePositive": 13031,
+    "totalFalsePositive": 753,
+    "totalFalseNegative": 753,
+    "total": 13791,
+    "accuracy": 0
+}
